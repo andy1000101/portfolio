@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Andrew Britto – Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      
+<body>
+  <header>
+    <header>
+        <div class="nav-bar">
+            <div class="name">
+                <script>
+                    const name = document.querySelector('.name');
+                    name.addEventListener('mouseover', () => {
+                      name.classList.remove('hovered');
+                      void name.offsetWidth; // Trigger reflow
+                      name.classList.add('hovered');
+                    });
+                  </script>
+                  
+                <span>A</span><span>N</span><span>D</span><span>R</span><span>E</span><span>W</span><span>&nbsp;</span><span>B</span><span>R</span><span>I</span><span>T</span><span>T</span><span>O</span>
+              </div>
+              
+          <nav>
+            <a href="index.html">PROJECTS</a>
+            <a href="about.html">ABOUT</a> <!-- Link to About -->
+            <a href="contact.html">CONTACT</a> <!-- Link to Contact -->
+          </nav>
+        </div>
+      </header>
+      
+  </header>
+
+  <main>
+
+    <section class="intro-section">
+<div class="intro-text hidden">
+  <h1>Hello! I am Andrew Britto<br><span>A multidisciplinary designer</span></h1>
+  <p>I enjoy bringing concepts and ideas to life</p>
+  <p>Here's some of my work</p>
+</div>
+
+</section>
+
+    <section id="projects" class="projects-grid">
+      <div class="project-grid">
+  <a href="project1.html" class="project">
+    <h3>Wasted</h3>
+  </a>
+
+  <a href="project2.html" class="project">
+    <h3>Glass Lamp</h3>
+  </a>
+
+  <a href="project3.html" class="project">
+    <h3>Hearing Shapes</h3>
+  </a>
+
+  <a href="project4.html" class="project">
+    <h3>Furniture Design</h3>
+  </a>
+</div>
+
+          
+    </section>
+
+<footer>
+  <div class="footer-cat-ascii">
+    <pre class="ascii-cat">
+ /\_/\
+( <span class="eye">o</span>.<span class="eye">o</span> )
+ > ^ <
+    </pre>
+  </div>
+
+</footer>
+
+  <script>
+    //intro animation 
+  window.addEventListener('load', () => {
+    document.querySelector('.intro-text').classList.remove('hidden');
+    document.querySelector('.intro-text').classList.add('fade-in');
+  });
+</script>
+
+<script>
+  //cat eyes
+  const eyes = document.querySelectorAll('.eye');
+
+  function blink() {
+    eyes.forEach(eye => eye.textContent = '-');
+    setTimeout(() => {
+      eyes.forEach(eye => eye.textContent = 'o');
+    }, 200);
+  }
+
+  // Blink every 3–5 seconds randomly
+  setInterval(blink, Math.floor(Math.random() * 2000) + 3000);
+</script>
+
+
+</body>
+</html>
